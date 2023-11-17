@@ -1,6 +1,8 @@
 import React from "react";
 import Appartements from "../../appartements.json";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+// import DetailLogement from "../fiche-logement";
 
 
 const GalleryContainer = styled.div`
@@ -25,15 +27,16 @@ function Gallery() {
     
     return (
         <GalleryContainer>
-            {
-                Appartements.map((appartement)=>(
-            <AppartementCard key={appartement.id}>
-                <h3>{appartement.title}</h3>
-                <img src={appartement.cover}alt={appartement.title}/>
+        {Appartements.map((appartement) => (
+          <Link to={`/fiche-logement/${appartement.id}`} key={appartement.id}>
+            <AppartementCard>
+              <h3>{appartement.title}</h3>
+              <img src={appartement.cover} alt={appartement.title} />
             </AppartementCard>
-                ))
-}
-  </GalleryContainer>
+          </Link>
+        ))}
+      </GalleryContainer>
+
     )
 }
 

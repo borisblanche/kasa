@@ -24,6 +24,8 @@ import App from './App';
 // import Home from './pages/Home';
 import Apropos from '../src/pages/apropos/apropos';
 import Error from '../../kasa/src/pages/Error/index';
+import appartements from "../src/appartements.json"
+import DetailLogement from './components/fiche-logement';
 
 ReactDOM.render(
   <Router>
@@ -31,7 +33,10 @@ ReactDOM.render(
       <Route path="/" element={<App />} />
       <Route path="/apropos" element={<Apropos />} />
       <Route path="*" element={<Error />} />
+      <Route path="/fiche-logement/:id" element={<DetailLogement appartements={appartements} />} />
     </Routes>
   </Router>,
   document.getElementById('root')
 );
+
+

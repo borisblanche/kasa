@@ -9,6 +9,8 @@ import Gallery from '../src/components/gallery'
 // import Apropos from './components/apropos/apropos';
 // import Home from '../src/pages/home/';
 // import Error from './pages/home/Error/';
+// import DetailLogement from './components/fiche-logement';
+// import { Route } from 'react-router-dom';
 
 
 
@@ -34,5 +36,6 @@ function App() {
   
   );
 }
+
 
 export default App;
