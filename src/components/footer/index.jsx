@@ -5,7 +5,13 @@ import styled from "styled-components"
 const FooterContainer = styled.div`
 background-color:black;
 color:white;
-text-align:center;`
+text-align:center;
+margin-bottom:0px;
+padding-top: 30px;
+padding-bottom: 20px;
+
+
+`
 
 
 function Footer() {

@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -37,3 +38,15 @@
   }
 }
 
+/* body{
+  margin-left:100px;
+  margin-right:100px;
+} */
+.RedLink {
+  color:#FF6060
+}
+
+.RedDrop{
+  background-color: #FF6060;
+  color:white
+}

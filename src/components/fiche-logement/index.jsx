@@ -5,20 +5,24 @@ import NavHeader from '../header';
 import Footer from '../footer';
 import styled from 'styled-components';
 
-const InfoLog = styled.div`
-color:blue;`
 
-const InfoLogDrop = styled.select`
-color:blue;
-display:grid;
-grid-templates-columns:1fr 1fr`
-
-const Option = styled.option`
-color:red;`
+import Carousel from '../caroussel';
+import Error from '../../pages/Error';
+import HotesCard from '../host';
+import LocationCard from '../location-card';
+import DescripCard from '../descriptionDrop';
 
 
-const OptionMenu = styled.option`
-background-color : green;`
+const InfoLocation = styled.div`
+display:flex ;
+flex-direction:raw;
+
+margin-left:10%;
+margin-right:10%;
+justify-content : space-between;
+
+`
+
 
 function DetailLogement({ appartements }) {
   const { id } = useParams();
@@ -27,35 +31,20 @@ function DetailLogement({ appartements }) {
 
   if (!logement) {
     // Gérer le cas où le logement n'est pas trouvé
-    return <div>Logement non trouvé</div>;
+    return <Error/>
   }
 
   return (
     <div>
-      <NavHeader/>
+      <NavHeader />
+      <Carousel appartement={logement} />
+    <InfoLocation>
+<LocationCard appartements={appartements}/>
+<HotesCard appartements={appartements}/>
+      </InfoLocation>
+      <DescripCard appartements={appartements}/>
+      <Footer /> 
       
-      {/* <h2>page detail</h2> */}
-     
-     <img src={logement.cover} alt={logement.title}/>
-      <h2>{logement.title}</h2>
-      <h3>{logement.location}</h3>
-      {/* Autres détails du logement */}
-      <div>
-        <p>{logement.tags}</p>
-      </div>
-      <InfoLog>
-      <InfoLogDrop>
-     
-      <OptionMenu >description </OptionMenu>
-      <Option  value="">{logement.description}</Option>
-      </InfoLogDrop>
-      <InfoLogDrop>
-      <option >equipements</option>
-      <option  value="">{logement.equipments}</option>
-       
-        </InfoLogDrop>
-        </InfoLog>
-      <Footer/>
     </div>
   );
 }
