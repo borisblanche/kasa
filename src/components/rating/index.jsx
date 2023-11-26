@@ -1,16 +1,29 @@
 import React from "react";
+import styled from "styled-components";
 
 const StarRating = ({ rating }) => {
-  // Arrondir la note à la demi-étoile la plus proche
+
   const roundedRating = Math.round(rating * 2) / 2;
 
-  // Créer un tableau d'étoiles pleines et vides en fonction de la note
+  const StarOn = styled.span`
+  font-size:24px;
+  gap:25px;
+  padding-left:10px;
+  xolor:#FF6060;
+`
+  const StarOff = styled.span`
+  font-size:24px;
+  gap:25px;
+  padding-left:10px;
+  color:#E3E3E3;
+`
+  
   const stars = [];
   for (let i = 0; i < 5; i++) {
     if (i < roundedRating) {
-      stars.push(<span key={i}>&#9733;</span>); // étoile pleine
+      stars.push(<StarOn key={i}>&#9733;</StarOn>); // étoile pleine
     } else {
-      stars.push(<span key={i}>&#9734;</span>); // étoile vide
+      stars.push(<StarOff key={i}>&#9733;</StarOff>); // étoile vide
     }
   }
 

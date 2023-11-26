@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-
 import NavHeader from '../src/components/header/index'
 import Banner from '../src/components/banner'
 import Footer from '../src/components/footer'

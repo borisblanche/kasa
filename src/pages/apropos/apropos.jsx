@@ -1,14 +1,14 @@
 import React from "react"
-// import { Link } from "react-router-dom"
 import NavHeader from "../../components/header"
-import Banner from "../../components/banner"
 import Footer from "../../components/footer"
-// import styled from "styled-components"
 import Accordion from "../../components/accordion"
-import { useParams } from 'react-router-dom';
+import styled from "styled-components"
+import AProposBanner from "../../components/AproposBanner"
 
 
-
+const AccordionAproposBox = styled.div`
+margin-left:20%;
+margin-right:20%;`
 
 
 function Apropos() {
@@ -20,11 +20,13 @@ function Apropos() {
           ];
     return (
         <div>
-            <NavHeader />
-            <Banner />
+        <NavHeader />
+        <AProposBanner/>
+        < AccordionAproposBox>
      {accordionData.map((item, index) => (
         <Accordion key={index} title={item.title} content={item.content} />
-      ))}
+     ))}
+          </AccordionAproposBox>
         <Footer/>
         </div>
     )

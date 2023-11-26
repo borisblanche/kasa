@@ -4,22 +4,26 @@ import styled from 'styled-components';
 import TagList from '../tags';
 
 const LocCard = styled.div`
-// background-color:blue;
+//  background-color:yellow;
 display:flex;
 flex-direction: column;
 justify-content :start;
-width: 100%;
+width: 50%;
 color:#FF6060;
 `
 
 const LocTitle = styled.h2`
 display:flex;
 justify-content :start;
+// background-color:cyan;
+margin-bottom:0px
 `
 
 const LocLocation = styled.h3`
 display:flex;
+margin-top:5px;
 justify-content :start;
+// background-color:green;
 `
 const TagLocation = styled.div`
 
@@ -32,24 +36,17 @@ function LocationCard({ appartements }) {
     const logement = appartements.find((appartement)=>appartement.id.toString() === id);
   
     if (!logement) {
-      // Gérer le cas où le logement n'est pas trouvé
-      return <div>la localilasition n est pas presente</div>
+      
+      return <div>la localisation n est pas presente</div>
     }
   
     return (
       <LocCard>
-       
-       
         <LocTitle>{logement.title}</LocTitle>
         <LocLocation>{logement.location}</LocLocation>
         <TagLocation>
             <TagList tags={logement.tags} />
             </TagLocation>
-        
-  
-  
-       
-        
       </LocCard>
     );
   }

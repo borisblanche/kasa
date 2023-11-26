@@ -11,9 +11,11 @@ display:flex;
 color:white;
 background-color:#FF6060;
 background:linear-gradient(#FFFFFF,0%#FFFFFF00);
-border-radius:15px;
-padding-left:15px;
-padding-right:15px;
+border-radius:10px;
+padding-top:5px;
+padding-bottom:5px;
+padding-left:30px;
+padding-right:30px;
 gap:20px`
 
 const TagList = ({ tags }) => {

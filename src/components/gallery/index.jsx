@@ -2,7 +2,7 @@ import React from "react";
 import Appartements from "../../appartements.json";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-// import DetailLogement from "../fiche-logement";
+
 
 
 const GalleryContainer = styled.div`

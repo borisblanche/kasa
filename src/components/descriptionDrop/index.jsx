@@ -1,86 +1,48 @@
-// import React from "react";
-
-// import styled from "styled-components";
-// import { useParams } from 'react-router-dom';
-// // import StarRating from '../rating';
-
-// const InfoLog = styled.div`
-//     display:flex;
-//     flex-direction:raw;
-//     padding-bottom:40px;
-//     padding-top:40px;`
-
-
-
-
-// const DescriptionDrop = styled.select`
-// padding-left:20px;
-// padding-right:20px;
-// border-radius:25px;
-// padding :10px;
-// width:30%;
-// margin:auto;`
-
-// const EquipmentDrop = styled.select`
-// padding-left:20px;
-// padding-right:20px;
-// padding :10px;
-// border-radius:15px;
-// width:30%;
-// margin:auto;
-// `
-
-
-// const OptionDescription = styled.option`
-
-// display:flex;`
-
-
-// const OptionEquipment = styled.option`
-
-// display:flex;`
-
-
-
-
-// function DescripCard({ appartements }){
-//     const { id } = useParams();
- 
-//     const logement = appartements.find((appartement)=>appartement.id.toString() === id);
-  
-  
-//     return (
-//     <InfoLog>
-//     <DescriptionDrop>
-//     <OptionDescription >description </OptionDescription>
-//     <OptionDescription value="">{logement.description}</OptionDescription>
-//     </DescriptionDrop>
-//     <EquipmentDrop>
-//     <OptionEquipment>equipements</OptionEquipment>
-//     <OptionEquipment value="">{logement.equipments}</OptionEquipment>
-//       </EquipmentDrop>
-//       </InfoLog>
-//     );
-// }
-
-
-// export default DescripCard;
 
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import Accordion from '../accordion';
+import styled from 'styled-components';
 
+const DescripAccordionBox = styled.div`
+  display:flex;
+  grid-templates-columns:1fr 1fr ;
+  flex-direction:raw;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  // background-color:blue;
+  justify-items:space-between;
+  gap:5%;
 
-const DescripCard = ({appartements}) => {
+  
+`;
+
+const DescripBox = styled.div`
+width:50%;
+`
+
+const EquipBox = styled.div`
+width:50%;
+`
+
+const DescripCard = ({ appartements }) => {
   const { id } = useParams();
- 
-      const logement = appartements.find((appartement)=>appartement.id.toString() === id);
+
+  const logement = appartements.find((appartement) => appartement.id.toString() === id);
+
   return (
-    <div>
-      <Accordion title="Description"content={logement.description} />
-      <Accordion title="Equipements" content={logement.equipments} />
-    </div>
+    <DescripAccordionBox>
+      <DescripBox>
+        <Accordion title="Description" content={logement.description}  />
+      </DescripBox>
+      <EquipBox>
+        <Accordion title="Equipements" content={logement.equipments} />
+        </EquipBox>
+    </DescripAccordionBox>
   );
 };
 
 export default DescripCard;
+
+

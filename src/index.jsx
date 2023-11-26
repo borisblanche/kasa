@@ -2,14 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import App from './App';
-// import Home from './pages/Home';
 import Apropos from '../src/pages/apropos/apropos';
 import Error from '../../kasa/src/pages/Error/index';
 import appartements from "../src/appartements.json"
 import DetailLogement from './components/fiche-logement';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"; 
-// import Carousel from './components/caroussel';
+
 
 ReactDOM.render(
   <Router>

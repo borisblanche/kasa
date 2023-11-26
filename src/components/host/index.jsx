@@ -2,32 +2,42 @@ import React from "react";
 import styled from "styled-components";
 import { useParams } from 'react-router-dom';
 import StarRating from '../rating';
-// import Error from '../../pages/Error';
-// import appartements from "../../appartements.json";
+
 
 
 const HoteCard = styled.div`
 display: flex;
 flex-direction : column;
 justify-content:space-between;
+align-items:stretch;
+color:#FF6060;
 `
 
 const Presentation = styled.div`
 display: flex;
+flex-direction:row;
 justify-content:flex-end;
-
+flex-wrap: wrap;
+vertical-align:center;
+margin-top:15px;
 `
 
 const HosteImg = styled.img`
+display:flex;
 border-radius:50%;
-margin-top: 10%;
-margin-right: 10%;
-width:60px;
-height:60px;`
+margin:auto;
+margin-right: 0;
+margin-left: 0;
+width:64px;
+height:64px;`
 
 const StarCard = styled.div`
 display: flex;
 justify-content:space-around;
+`
+const HostNameContent = styled.h4`
+display:block;
+width:50px;
 `
 
 function HotesCard({ appartements }) {
@@ -47,7 +57,7 @@ function HotesCard({ appartements }) {
     return (
         <HoteCard>
             <Presentation>
-                <h4>{hostName}</h4>
+                <HostNameContent>{hostName}</HostNameContent>
       
                 <HosteImg src={hostPicture} alt="" />
             </Presentation>
