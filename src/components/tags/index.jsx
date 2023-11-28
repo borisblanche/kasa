@@ -4,12 +4,15 @@ import styled from "styled-components";
 const TagContainer = styled.div`
 display:flex;
 flex-direction: raw;
-gap:20px;`
+gap:20px;
+
+`
 
 const TagElement = styled.div`
-display:flex;
+display:inline-flex;
 color:white;
 background-color:#FF6060;
+
 background:linear-gradient(#FFFFFF,0%#FFFFFF00);
 border-radius:10px;
 padding-top:5px;

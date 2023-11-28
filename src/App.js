@@ -10,13 +10,10 @@ import Gallery from '../src/components/gallery'
 
 
 function App() {
-  return (<div>
-    
-    
-    <NavHeader />
+  return (<div >
+     <NavHeader  />
     <Banner />
       <Gallery />
-     
     <Footer/>
     </div>
   

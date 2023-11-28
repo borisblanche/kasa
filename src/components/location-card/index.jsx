@@ -26,7 +26,6 @@ justify-content :start;
 // background-color:green;
 `
 const TagLocation = styled.div`
-
 `
 
 

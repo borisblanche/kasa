@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 
 
+
 const GalleryContainer = styled.div`
 margin-top:80px;
 margin-bottom:80px;
@@ -15,9 +16,7 @@ padding:3%;
 background-color:#f6f6f6;
 back-ground-opacity:0.3;
 border-radius:15px;
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-gap:16px;`
+`
 
 const AppartementCard = styled.div`
 
@@ -31,12 +30,13 @@ img {
   width: 100%;
   height:100%;
   max-height: 350px;
-  min-height: 200px;
+  min-height: 300px;
   object-fit: cover;
 }
 `;
 const AptTitle = styled.h4`
 position: absolute;
+display:flex;
 color:white;
 bottom: 0;
 left: 0;
@@ -55,12 +55,12 @@ box-sizing: border-box; /* Inclusion de la bordure et du remplissage dans la lar
 
 function Gallery() {
     return (
-        <GalleryContainer>
+        <GalleryContainer className='gallery'>
         {Appartements.map((appartement) => (
           <Link to={`/fiche-logement/${appartement.id}`} key={appartement.id}>
-            <AppartementCard>
+            <AppartementCard className="gallery-card" >
             <AptTitle>{appartement.title}</AptTitle>
-              <img src={appartement.cover} alt={appartement.title} />
+              <img className="gallery-img" src={appartement.cover} alt={appartement.title} />
             </AppartementCard>
           </Link>
          

@@ -1,6 +1,5 @@
 import React from 'react'
 import Logo from '../../assets/LOGO.png'
-
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -13,9 +12,6 @@ margin-left:10%;
 margin-right:10%;
 margin-top:40px;
 margin-bottom:40px;
-
-
-
 `
 
 const LogoHeader = styled.img`

@@ -29,19 +29,16 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
-
-/* body{
-  margin-left:100px;
-  margin-right:100px;
 } */
+
+
 .RedLink {
   color:#FF6060
 }
@@ -51,4 +48,21 @@
   color:white
 }
 
+.gallery{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr ;
+grid-gap:16px;
+}
+
+@media screen and (max-width: 800px) {
+  
+  .gallery{
+    grid-template-columns: 1fr ;
+  }
+  .gallery-card{
+    display:flex;
+    flex-direction:column
+  }
+  
+}
 
