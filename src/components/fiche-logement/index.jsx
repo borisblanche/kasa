@@ -33,7 +33,7 @@ function DetailLogement({ appartements }) {
     <div>
       <NavHeader />
       <Carousel appartement={logement} />
-    <InfoLocation>
+    <InfoLocation className='InfoLocation'>
 <LocationCard appartements={appartements}/>
 <HotesCard appartements={appartements}/>
       </InfoLocation>

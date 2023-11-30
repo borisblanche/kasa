@@ -8,7 +8,10 @@ import AProposBanner from "../../components/AproposBanner"
 
 const AccordionAproposBox = styled.div`
 margin-left:20%;
-margin-right:20%;`
+margin-top:40px;
+margin-bottom:40px;
+margin-right:20%;
+`
 
 
 function Apropos() {

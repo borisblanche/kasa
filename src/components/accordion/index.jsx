@@ -22,7 +22,6 @@ margin-bottom:auto;
 
 const AccordionBtnContainer = styled.div`
   display: block;
-  
   flex-direction: column;
   allign-content: center;
   max-width:100%;
@@ -30,11 +29,10 @@ const AccordionBtnContainer = styled.div`
   justify-content: space-around;
  margin-left:auto;
  margin-right:auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   background-color:#f6f6f6;
   color:#FF6060;
-  border-radius:5px;
 `;
 
 const AccordionBtn = styled.button`
@@ -45,6 +43,8 @@ const AccordionBtn = styled.button`
   max-width:100%;
   margin-left:auto;
   margin-right:auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 100%;
   max-height:45px;
   border-radius:5px;

@@ -6,9 +6,10 @@ import StarRating from '../rating';
 
 
 const HoteCard = styled.div`
-display: flex;
-flex-direction : column;
+// display: flex;
+// flex-direction : column;
 justify-content:space-between;
+// background-color:red;
 align-items:stretch;
 color:#FF6060;
 `
@@ -16,10 +17,11 @@ color:#FF6060;
 const Presentation = styled.div`
 display: flex;
 flex-direction:row;
+// background-color:cyan;
 justify-content:flex-end;
 flex-wrap: wrap;
 vertical-align:center;
-margin-top:15px;
+// margin-top:15px;
 `
 
 const HosteImg = styled.img`
@@ -33,6 +35,7 @@ height:64px;`
 
 const StarCard = styled.div`
 display: flex;
+// background-color:violet;
 justify-content:space-around;
 `
 const HostNameContent = styled.h4`
@@ -55,13 +58,12 @@ function HotesCard({ appartements }) {
     const hostName = logement.host ? logement.host.name : "Nom non disponible";
   const hostPicture = logement.host ? logement.host.picture : ""; // ou une image par défaut
     return (
-        <HoteCard>
-            <Presentation>
+        <HoteCard className="HoteCard">
+            <Presentation className="HotePresentation">
                 <HostNameContent>{hostName}</HostNameContent>
-      
                 <HosteImg src={hostPicture} alt="" />
             </Presentation>
-        <StarCard>
+        <StarCard className="StarCard">
                 <StarRating rating={logement.rating} />
                 </StarCard>
         </HoteCard>

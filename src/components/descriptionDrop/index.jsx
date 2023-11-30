@@ -11,7 +11,6 @@ const DescripAccordionBox = styled.div`
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
-  // background-color:blue;
   justify-items:space-between;
   gap:5%;
 
@@ -19,11 +18,11 @@ const DescripAccordionBox = styled.div`
 `;
 
 const DescripBox = styled.div`
-width:50%;
+
 `
 
 const EquipBox = styled.div`
-width:50%;
+// width:50%;
 `
 
 const DescripCard = ({ appartements }) => {
@@ -32,11 +31,11 @@ const DescripCard = ({ appartements }) => {
   const logement = appartements.find((appartement) => appartement.id.toString() === id);
 
   return (
-    <DescripAccordionBox>
-      <DescripBox>
-        <Accordion title="Description" content={logement.description}  />
+    <DescripAccordionBox className='DescripAccordionBox'>
+      <DescripBox className='DescripBox'>
+        <Accordion  title="Description"  content={logement.description}  />
       </DescripBox>
-      <EquipBox>
+      <EquipBox className='EquipBox'>
         <Accordion title="Equipements" content={logement.equipments} />
         </EquipBox>
     </DescripAccordionBox>

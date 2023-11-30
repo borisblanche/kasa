@@ -3,13 +3,14 @@ import styled from "styled-components";
 
 const TagContainer = styled.div`
 display:flex;
-flex-direction: raw;
+// flex-direction: raw;
 gap:20px;
 
 `
 
 const TagElement = styled.div`
-display:inline-flex;
+display:flex;
+flex-direction:raw;
 color:white;
 background-color:#FF6060;
 

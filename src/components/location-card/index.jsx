@@ -4,11 +4,7 @@ import styled from 'styled-components';
 import TagList from '../tags';
 
 const LocCard = styled.div`
-//  background-color:yellow;
-display:flex;
-flex-direction: column;
-justify-content :start;
-width: 50%;
+ 
 color:#FF6060;
 `
 
@@ -23,9 +19,10 @@ const LocLocation = styled.h3`
 display:flex;
 margin-top:5px;
 justify-content :start;
-// background-color:green;
+
 `
 const TagLocation = styled.div`
+// background-color:green;
 `
 
 
@@ -40,10 +37,10 @@ function LocationCard({ appartements }) {
     }
   
     return (
-      <LocCard>
+      <LocCard className='LocCard'>
         <LocTitle>{logement.title}</LocTitle>
         <LocLocation>{logement.location}</LocLocation>
-        <TagLocation>
+        <TagLocation className='TagLocation'>
             <TagList tags={logement.tags} />
             </TagLocation>
       </LocCard>

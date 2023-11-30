@@ -53,6 +53,24 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr ;
 grid-gap:16px;
 }
+.HoteCard{
+  display: flex;
+flex-direction : column;
+
+}
+.LocCard{
+  display:flex;
+flex-direction: column;
+justify-content :start;
+width: 50%;
+}
+
+.DescripBox{
+  width:50%;
+}
+  .EquipBox{
+    width:50%;
+  }
 
 @media screen and (max-width: 800px) {
   
@@ -63,6 +81,47 @@ grid-gap:16px;
     display:flex;
     flex-direction:column
   }
-  
+  .InfoLocation{
+    display:flex;
+    flex-direction:column;
+  }
+  .HoteCard{
+    /* display: gird;
+    grid-template-columns:1fr 1fr; */
+    display:flex;
+    flex-direction: row-reverse;
+    /* background-color:black; */
+    
+  }
+  .HotePresentation{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    /* display:flex;
+    max-width:50%; */
+ }
+  .StarCard{
+    display:flex;
+    flex-direction:column;
+    /* display:flex;
+    max-width:50%  */
+  }
+  .LocCard{
+    width:100%;
+  }
+  .DescripAccordionBox{
+    display:flex;
+    flex-direction:column;
+    justify-contents:space-around;
+   
+    gap:20px;
+  }
+  .DescripBox{
+    width:100%;
+    
+  }
+  .EquipBox{
+    width:100%;
+  }
 }
 
