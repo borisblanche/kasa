@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import App from './App';
 import Apropos from '../src/pages/apropos/apropos';
-import Error from '../../kasa/src/pages/Error/index';
+import Error from '../src/pages/Error/index';
 import appartements from "../src/appartements.json"
 import DetailLogement from './components/fiche-logement';
 import "slick-carousel/slick/slick.css";
