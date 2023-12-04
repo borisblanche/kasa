@@ -7,15 +7,30 @@ import { Link } from "react-router-dom";
 
 
 const GalleryContainer = styled.div`
+display: grid;
+grid-template-columns: 1fr 1fr 1fr ;
+grid-gap:50px;
+
 margin-top:80px;
 margin-bottom:80px;
 margin-left:10%;
 margin-right:10%;
-padding:3%;
+
+padding:50px;
 // background:linear-gradient(#FF6060,#FFFFFF00,#000000);
 background-color:#f6f6f6;
 back-ground-opacity:0.3;
 border-radius:15px;
+
+@media( max-width : 1024px){
+  grid-template-columns:1fr 1fr;
+}
+@media( max-width : 768px){
+  grid-template-columns:1fr;
+  padding:0;
+  margin:10%;
+}
+
 `
 
 const AppartementCard = styled.div`
@@ -23,15 +38,19 @@ const AppartementCard = styled.div`
 border-radius:15px;
 
 position: relative;
-overflow: hidden; /* Pour gérer le débordement de l'image */
-
+overflow: hidden; 
+@media (max-width:375px){
+    
+  max-height: 225px;
+    }
 img {
   border-radius:15px;
   width: 100%;
   height:100%;
-  max-height: 350px;
-  min-height: 300px;
+  max-height: 340px;
+  min-height: 340px;
   object-fit: cover;
+
 }
 `;
 const AptTitle = styled.h4`
@@ -45,7 +64,7 @@ width: 40%;
 
 padding: 8px; /* Ajustement du rembourrage */
 box-sizing: border-box; /* Inclusion de la bordure et du remplissage dans la largeur */
-`;
+ `;
 
 
 
@@ -61,7 +80,7 @@ function Gallery() {
             <AppartementCard className="gallery-card" >
             <AptTitle>{appartement.title}</AptTitle>
               <img className="gallery-img" src={appartement.cover} alt={appartement.title} />
-            </AppartementCard>
+                         </AppartementCard>
           </Link>
          
         ))}

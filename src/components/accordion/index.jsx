@@ -46,8 +46,9 @@ const AccordionBtn = styled.button`
   margin-top: 20px;
   margin-bottom: 20px;
   width: 100%;
-  max-height:45px;
+  height:52px;
   border-radius:5px;
+  border:0 solid white;
   padding-left:10px;
   padding-right:10px;
   justify-content:space-between;

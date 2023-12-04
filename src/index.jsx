@@ -5,7 +5,7 @@ import App from './App';
 import Apropos from '../src/pages/apropos/apropos';
 import Error from '../src/pages/Error/index';
 import appartements from "../src/appartements.json"
-import DetailLogement from './components/fiche-logement';
+import DetailLogement from './pages/fiche-logement';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"; 
 

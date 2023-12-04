@@ -41,6 +41,13 @@ justify-content:space-around;
 const HostNameContent = styled.h4`
 display:block;
 width:50px;
+margin-right:15px;
+color: #FF6060;
+text-align: right;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
 `
 
 function HotesCard({ appartements }) {

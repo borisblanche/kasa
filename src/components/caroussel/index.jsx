@@ -7,38 +7,61 @@ import "slick-carousel/slick/slick-theme.css";
 
 const CarouselContainer = styled.div`
   width: 80%;
-  height:400px;
+  height:415px;
   margin: auto;
- 
+  @media (max-width:768px){
+    height:255px;
+  };
 `;
 
 const CarrouselImg = styled.img`
 width:100%;
 max-height:400px;
-min-height:400px;
-object-fit: cover;`
+// min-height:400px;
+object-fit: cover;
+@media ( max-width : 768px ){
+ max-height:255px;
+}`
 
 const ArrowButton = styled.button`
 top:300px;
- 
+//  position:absolute;
   background-color: transparent;
   border: none;
-  font-size: 80px;
   vertical-align: middle;
   color: white;
   cursor: pointer;
+  @media (max-width:768px){
+    top:265px;
+  };
+ 
+ 
 `;
 
 const PrevButton = styled(ArrowButton)`
 color:white;
 left: 10%;
+margin-left:10px;
   position:absolute;
+  @media (max-width:768px){
+
+    svg{
+      height:24px;
+      width:24px;
+    }}
 `;
 
 const NextButton = styled(ArrowButton)`
 position:absolute;
  right:10%;
+ margin-right:10px;
   color:white;
+  @media (max-width:768px){
+
+    svg{
+      height:24px;
+      width:24px;
+    }}
 `;
 
 function Carousel({ appartement }) {

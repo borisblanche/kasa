@@ -1,13 +1,13 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import NavHeader from '../header';
-import Footer from '../footer';
+import NavHeader from '../../components/header';
+import Footer from '../../components/footer';
 import styled from 'styled-components';
-import Carousel from '../caroussel';
-import Error from '../../pages/Error';
-import HotesCard from '../host';
-import LocationCard from '../location-card';
-import DescripCard from '../descriptionDrop';
+import Carousel from '../../components/caroussel';
+import Error from '../Error';
+import HotesCard from '../../components/host';
+import LocationCard from '../../components/location-card';
+import DescripCard from '../../components/descriptionDrop';
 
 
 const InfoLocation = styled.div`

@@ -11,6 +11,13 @@ margin-left:20%;
 margin-top:40px;
 margin-bottom:40px;
 margin-right:20%;
+@media ( max-width:768px){
+  margin-left:10%;
+margin-top:40px;
+margin-bottom:40px;
+margin-right:10%;
+
+}
 `
 
 
