@@ -16,6 +16,12 @@ flex-direction:raw;
 margin-left:10%;
 margin-right:10%;
 justify-content : space-between;
+@media(max-width:375px ){
+  display:flex;
+  flex-direction:column;
+margin-left:20px;
+margin-right:20px;}
+}
 `
 
 

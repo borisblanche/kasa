@@ -9,6 +9,7 @@ text-align:center;
 margin:0;
 padding-top: 66px;
 padding-bottom: 58px;
+margin-top:17px;
 `
 const FooterText = styled.h3`
 color: #FFF;

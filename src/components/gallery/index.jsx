@@ -30,7 +30,11 @@ border-radius:15px;
   padding:0;
   margin:10%;
 }
-
+@media ( max-width : 375px ){
+  margin-left:20px;
+margin-right:20px;
+grid-gap:20px;
+}
 `
 
 const AppartementCard = styled.div`

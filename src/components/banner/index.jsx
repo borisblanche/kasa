@@ -28,6 +28,10 @@ color:FFFFFF;
     justify-content: flex-start;
 align-items:center;
 }
+@media ( max-width : 375px ){
+    margin-left:20px;
+margin-right:20px;
+}
 
 `
 const BannerTitle = styled.h2`

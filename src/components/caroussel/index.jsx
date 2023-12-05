@@ -6,12 +6,19 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const CarouselContainer = styled.div`
-  width: 80%;
+  // width: 80%;
   height:415px;
-  margin: auto;
+  margin-right:10%;
+  margin-left:10%;
   @media (max-width:768px){
     height:255px;
-  };
+  }
+  @media (max-width:375px){
+    margin-left:20px;
+margin-right:20px;
+
+
+}
 `;
 
 const CarrouselImg = styled.img`
@@ -21,7 +28,13 @@ max-height:400px;
 object-fit: cover;
 @media ( max-width : 768px ){
  max-height:255px;
-}`
+}
+// @media (max-width:375px){
+//   margin-left:20px;
+// margin-right:20px;
+
+
+// }`
 
 const ArrowButton = styled.button`
 top:300px;
@@ -33,6 +46,8 @@ top:300px;
   cursor: pointer;
   @media (max-width:768px){
     top:265px;
+  @media (max-width:375px){
+    top:210px;
   };
  
  
@@ -49,6 +64,9 @@ margin-left:10px;
       height:24px;
       width:24px;
     }}
+    @media (max-width:375px){
+      left:5%}
+    }
 `;
 
 const NextButton = styled(ArrowButton)`
@@ -62,6 +80,9 @@ position:absolute;
       height:24px;
       width:24px;
     }}
+    @media (max-width:375px){
+      right:5%}
+    }
 `;
 
 function Carousel({ appartement }) {

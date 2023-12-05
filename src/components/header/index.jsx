@@ -12,8 +12,13 @@ margin-left:10%;
 margin-right:10%;
 margin-top:40px;
 margin-bottom:40px;
-
 color:#FF6060;
+@media (max-width:375px){
+    margin-left:20px;
+margin-right:20px;
+margin-top:20px;
+
+}
 `
 
 const LogoHeader = styled.img`
@@ -29,23 +34,28 @@ color:#FF6060;
 display:flex ;
 justify-content: end;
 gap:50px;
-@media (max-width:375px){
-    gap:10px;
+
  `
 const ListLink = styled.li`
 color: #FF6060;
+list-style:none;
 text-align: right;
 font-family: Montserrat;
 font-size: 24px;
 font-style: normal;
 font-weight: 500;
 line-height: 142.6%; /* 34.224px */
-text-decoration-line: underline;
 @media (max-width:375px){
-font-size:11px;
+font-size:12px;
+;
 }
 
 `
+
+const StyledLink = styled(Link)`
+color: #ff6060;
+text-decoration:none;
+text-align: left;`
 function NavHeader() {
     
     return(
@@ -53,8 +63,8 @@ function NavHeader() {
             
             <LogoHeader src={Logo} alt="logo-kasa" />
             <ListeHeader>
-                <ListLink><Link  to ="/">Acceuil</Link></ListLink>
-                <ListLink><Link  to ="/apropos">A Propos</Link></ListLink>
+                <ListLink><StyledLink  to ="/">Acceuil</StyledLink></ListLink>
+                <ListLink><StyledLink  to ="/apropos">A Propos</StyledLink></ListLink>
                 </ListeHeader>
     </NavBoard>)
 }

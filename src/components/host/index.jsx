@@ -6,22 +6,32 @@ import StarRating from '../rating';
 
 
 const HoteCard = styled.div`
-// display: flex;
-// flex-direction : column;
-justify-content:space-between;
-// background-color:red;
+display: flex;
+flex-direction : column;
+justify-content:space-around;
+
 align-items:stretch;
 color:#FF6060;
+@media (max-width:765px){
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content:space-between;
+}
 `
 
 const Presentation = styled.div`
 display: flex;
 flex-direction:row;
-// background-color:cyan;
+
 justify-content:flex-end;
 flex-wrap: wrap;
 vertical-align:center;
 // margin-top:15px;
+@media (max-width:765px){
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
 `
 
 const HosteImg = styled.img`
@@ -31,16 +41,23 @@ margin:auto;
 margin-right: 0;
 margin-left: 0;
 width:64px;
-height:64px;`
+height:64px;
+@media (max-width:375px){
+    width:32px;
+    height:32px; 
+}`
 
 const StarCard = styled.div`
 display: flex;
 // background-color:violet;
 justify-content:space-around;
+@media (max-width:765px){
+    display:flex;
+    flex-direction:column;}
 `
 const HostNameContent = styled.h4`
 display:block;
-width:50px;
+width:60px;
 margin-right:15px;
 color: #FF6060;
 text-align: right;
@@ -48,6 +65,12 @@ font-family: Montserrat;
 font-size: 18px;
 font-style: normal;
 font-weight: 500;
+@media (max-width:375px){
+    font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 142.6%;
+}
 `
 
 function HotesCard({ appartements }) {

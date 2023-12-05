@@ -8,21 +8,34 @@ const DescripAccordionBox = styled.div`
   display:flex;
   grid-templates-columns:1fr 1fr ;
   flex-direction:raw;
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+ 
+  margin-left: 10%;
+  margin-right: 10%;
   justify-items:space-between;
   gap:5%;
+  @media (max-width:375px){
+    margin-left:20px;
+    margin-right: 20px;
+    flex-direction:column;
+    justify-contents:space-around;
+   
+    
+
+  }
 
   
 `;
 
 const DescripBox = styled.div`
-
+width:50%;
+@media (max-width:768px){
+  width:100%;
 `
 
 const EquipBox = styled.div`
-// width:50%;
+ width:50%;
+ @media (max-width:768px){
+  width:100%;
 `
 
 const DescripCard = ({ appartements }) => {

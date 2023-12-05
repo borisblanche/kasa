@@ -23,9 +23,27 @@ margin-bottom:100px;
 
 const ErrorText = styled.h2`
 color:#ff6060;
-margin-bottom:100px;`
+margin-bottom:100px;
+font-family: Montserrat;
+font-size: 36px;
+font-style: normal;
+font-weight: 500;
+line-height: 142.6%;
+@media (max-width:768px){
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 142.6%;}`
 
-
+const BrError = styled.br`
+display:none;
+@media (max-width:768px){
+    display:block;
+}`
+const StyledErrorLink = styled(Link)`
+color: #ff6060;
+`
 
 
 function Error() {
@@ -34,8 +52,8 @@ function Error() {
         <NavHeader />
         <ErrorCard>
      <ErrorPicture src={ImgError} alt="Erreur 404" />
-            <ErrorText> Oups! La page que vous demandez n'existe pas</ErrorText>
-                <Link className="RedLink" to="/">Retourner sur la page d'acceuil</Link>
+            <ErrorText> Oups! La page que <BrError></BrError>vous demandez n'existe pas</ErrorText>
+                <StyledErrorLink to="/">Retourner sur la page d'acceuil</StyledErrorLink>
         </ErrorCard>
         <Footer />
             </div>
