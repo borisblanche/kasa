@@ -9,7 +9,6 @@ const HoteCard = styled.div`
 display: flex;
 flex-direction : column;
 justify-content:space-around;
-
 align-items:stretch;
 color:#FF6060;
 @media (max-width:765px){
@@ -22,11 +21,9 @@ color:#FF6060;
 const Presentation = styled.div`
 display: flex;
 flex-direction:row;
-
 justify-content:flex-end;
 flex-wrap: wrap;
 vertical-align:center;
-// margin-top:15px;
 @media (max-width:765px){
     display:flex;
     flex-direction:row;
@@ -49,7 +46,6 @@ height:64px;
 
 const StarCard = styled.div`
 display: flex;
-// background-color:violet;
 justify-content:space-around;
 @media (max-width:765px){
     display:flex;
@@ -82,7 +78,7 @@ function HotesCard({ appartements }) {
  
     const logement = appartements.find((appartement) => appartement.id.toString() === id);
     if (!logement) {
-        // Gérer le cas où le logement n'est pas trouvé
+        
         return <div> fiche non trouvée</div>
     }
     const hostName = logement.host ? logement.host.name : "Nom non disponible";

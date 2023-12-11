@@ -1,16 +1,8 @@
 import React from "react";
-import banner from '../../assets/banner.png'
 import styled from "styled-components";
 
-
-
-
 const BannerImg = styled.div`
-
-// background-color:black;
-// opacity:0.3;
-// background-image:url(${banner});
-background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(${banner});
+background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(${(props) => props.backgroundImage});
 background-position:center;
 background-size:cover;
 display:flex;
@@ -36,15 +28,12 @@ margin-right:20px;
 `
 const BannerTitle = styled.h2`
 color: #FFF;
-
 font-family: Montserrat;
 font-size: 48px;
 font-style: normal;
 font-weight: 500;
 line-height: 142.6%; 
 @media ( max-width : 768px ){
-    
-
 font-size: 24px;
 font-style: normal;
 font-weight: 500;
@@ -59,11 +48,11 @@ display:none;
     display:block;
 }`
 
-function Banner() {
+function Banner({ backgroundImage, title }) {
     return (
         
-        <BannerImg>
-            <BannerTitle>Chez vous,<MobileBreak></MobileBreak> partout et ailleurs</BannerTitle>
+        <BannerImg backgroundImage={backgroundImage}>
+            <BannerTitle>{title}<MobileBreak></MobileBreak></BannerTitle>
             </BannerImg>
             
     )

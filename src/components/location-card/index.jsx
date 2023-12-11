@@ -39,7 +39,6 @@ line-height: 142.6%;
   font-weight: 500;
   line-height: 142.6%;  
 }
-
 `
 
 const LocLocation = styled.h3`
@@ -52,7 +51,6 @@ justify-content :start;
   font-style: normal;
   font-weight: 500;
   line-height: 142.6%; }
-
 `
 const TagLocation = styled.div`
  

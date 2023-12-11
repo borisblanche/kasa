@@ -3,21 +3,15 @@ import Appartements from "../../appartements.json";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-
-
-
 const GalleryContainer = styled.div`
 display: grid;
 grid-template-columns: 1fr 1fr 1fr ;
 grid-gap:50px;
-
 margin-top:80px;
 margin-bottom:80px;
 margin-left:10%;
 margin-right:10%;
-
 padding:50px;
-// background:linear-gradient(#FF6060,#FFFFFF00,#000000);
 background-color:#f6f6f6;
 back-ground-opacity:0.3;
 border-radius:15px;
@@ -38,13 +32,10 @@ grid-gap:20px;
 `
 
 const AppartementCard = styled.div`
-
 border-radius:15px;
-
 position: relative;
 overflow: hidden; 
 @media (max-width:375px){
-    
   max-height: 225px;
     }
 img {
@@ -54,7 +45,6 @@ img {
   max-height: 340px;
   min-height: 340px;
   object-fit: cover;
-
 }
 `;
 const AptTitle = styled.h4`
@@ -63,17 +53,10 @@ display:flex;
 color:white;
 bottom: 0;
 left: 0;
-width: 40%;
-// background: rgba(255, 255, 255, 0.8); /* Fond semi-transparent pour le texte */
-
-padding: 8px; /* Ajustement du rembourrage */
-box-sizing: border-box; /* Inclusion de la bordure et du remplissage dans la largeur */
+width: 100%;
+padding: 8px; 
+box-sizing: border-box; 
  `;
-
-
-
- 
-
 
 
 function Gallery() {

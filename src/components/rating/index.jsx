@@ -27,9 +27,9 @@ const StarRating = ({ rating }) => {
   const stars = [];
   for (let i = 0; i < 5; i++) {
     if (i < roundedRating) {
-      stars.push(<StarOn key={i}>&#9733;</StarOn>); // étoile pleine
+      stars.push(<StarOn key={i}>&#9733;</StarOn>); 
     } else {
-      stars.push(<StarOff key={i}>&#9733;</StarOff>); // étoile vide
+      stars.push(<StarOff key={i}>&#9733;</StarOff>);
     }
   }
 

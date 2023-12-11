@@ -12,7 +12,6 @@ justify-content: space-around;
 align-items:center;
 text-align:center;
 margin-bottom:100px;
-
 `
 
 const ErrorPicture = styled.img`

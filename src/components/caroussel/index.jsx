@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const CarouselContainer = styled.div`
-  // width: 80%;
   height:415px;
   margin-right:10%;
   margin-left:10%;
@@ -24,21 +23,15 @@ margin-right:20px;
 const CarrouselImg = styled.img`
 width:100%;
 max-height:400px;
-// min-height:400px;
+
 object-fit: cover;
 @media ( max-width : 768px ){
  max-height:255px;
 }
-// @media (max-width:375px){
-//   margin-left:20px;
-// margin-right:20px;
-
-
-// }`
+`
 
 const ArrowButton = styled.button`
 top:300px;
-//  position:absolute;
   background-color: transparent;
   border: none;
   vertical-align: middle;
@@ -49,8 +42,6 @@ top:300px;
   @media (max-width:375px){
     top:210px;
   };
- 
- 
 `;
 
 const PrevButton = styled(ArrowButton)`
@@ -59,7 +50,6 @@ left: 10%;
 margin-left:10px;
   position:absolute;
   @media (max-width:768px){
-
     svg{
       height:24px;
       width:24px;
@@ -75,7 +65,6 @@ position:absolute;
  margin-right:10px;
   color:white;
   @media (max-width:768px){
-
     svg{
       height:24px;
       width:24px;

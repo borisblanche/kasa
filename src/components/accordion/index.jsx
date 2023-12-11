@@ -10,7 +10,6 @@ justify-items:space-around;
 margin-top:auto;
 margin-bottom:auto;
 @media (max-width:375px){
-    
   font-size: 13px;
 font-style: normal;
 font-weight: 500;
@@ -56,7 +55,7 @@ const AccordionBtn = styled.button`
   margin-left:auto;
   margin-right:auto;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   width: 100%;
   height:52px;
   @media(max-width:375px){
@@ -89,8 +88,20 @@ const Accordion = ({ title, content }) => {
         <Icon>
           </Icon>
         </AccordionIcon>
-      </AccordionBtn>
-      {isContentVisible && <p>{content}</p>}
+        </AccordionBtn>
+      {isContentVisible && (
+        <>
+          {Array.isArray(content) ? (
+            <ul>
+              {content.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>{content}</p>
+          )}
+        </>
+      )}
     </AccordionBtnContainer>
   );
 };

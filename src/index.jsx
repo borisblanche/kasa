@@ -9,6 +9,10 @@ import DetailLogement from './pages/fiche-logement';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"; 
 
+const link = document.createElement('link');
+link.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap';
+link.rel = 'stylesheet';
+document.head.appendChild(link);
 
 ReactDOM.render(
   <Router>

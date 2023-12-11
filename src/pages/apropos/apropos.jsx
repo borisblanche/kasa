@@ -3,8 +3,8 @@ import NavHeader from "../../components/header"
 import Footer from "../../components/footer"
 import Accordion from "../../components/accordion"
 import styled from "styled-components"
-import AProposBanner from "../../components/AproposBanner"
-
+import Banner from "../../components/banner"
+import background2 from "../../assets/AProposBannerImg.png";
 
 const AccordionAproposBox = styled.div`
 margin-left:20%;
@@ -16,10 +16,8 @@ margin-right:20%;
 margin-top:20px;
 margin-bottom:20px;
 margin-right:20px;
-
 }
 `
-
 
 function Apropos() {
     const accordionData = [
@@ -31,7 +29,8 @@ function Apropos() {
     return (
         <div>
         <NavHeader />
-        <AProposBanner/>
+        <Banner backgroundImage={background2} />
+        
         < AccordionAproposBox>
      {accordionData.map((item, index) => (
         <Accordion key={index} title={item.title} content={item.content} />

@@ -13,7 +13,6 @@ margin-top:17px;
 `
 const FooterText = styled.h3`
 color: #FFF;
-
 text-align: center;
 font-family: Montserrat;
 font-size: 24px;
