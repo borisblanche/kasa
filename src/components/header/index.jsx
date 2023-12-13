@@ -60,8 +60,13 @@ function NavHeader() {
     const [currentPage ] = useState(window.location.pathname);
     return(
         <NavBoard>
-            
-            <LogoHeader src={Logo} alt="logo-kasa" />
+             <Link to="/">
+        <LogoHeader
+          className={currentPage === '/' ? 'active' : ''}
+          src={Logo}
+          alt="logo-kasa"
+        />
+      </Link>
             <ListeHeader>
                 <ListLink><StyledLink className={currentPage === '/' ? 'active' : ''}  to ="/">Acceuil</StyledLink></ListLink>
                 <ListLink><StyledLink className={currentPage === '/apropos' ? 'active' : ''}  to ="/apropos">A Propos</StyledLink></ListLink>
