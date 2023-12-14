@@ -10,7 +10,7 @@ const StarRating = ({ rating }) => {
   gap:25px;
   padding-left:10px;
   xolor:#FF6060;
-  @media (max-width:375px){
+  @media (max-width:400px){
     font-size:18px;
   }
 `
@@ -19,7 +19,7 @@ const StarRating = ({ rating }) => {
   gap:25px;
   padding-left:10px;
   color:#E3E3E3;
-  @media (max-width:375px){
+  @media (max-width:400px){
     font-size:18px;
   }
 `

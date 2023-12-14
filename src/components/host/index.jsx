@@ -39,7 +39,7 @@ margin-right: 0;
 margin-left: 0;
 width:64px;
 height:64px;
-@media (max-width:375px){
+@media (max-width:400px){
     width:32px;
     height:32px; 
 }`
@@ -61,7 +61,7 @@ font-family: Montserrat;
 font-size: 18px;
 font-style: normal;
 font-weight: 500;
-@media (max-width:375px){
+@media (max-width:400px){
     font-size: 12px;
 font-style: normal;
 font-weight: 500;

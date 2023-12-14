@@ -35,7 +35,7 @@ const AppartementCard = styled.div`
 border-radius:15px;
 position: relative;
 overflow: hidden; 
-@media (max-width:375px){
+@media (max-width:400px){
   max-height: 225px;
     }
 img {

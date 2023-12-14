@@ -11,7 +11,7 @@ const DescripAccordionBox = styled.div`
   margin-right: 10%;
   justify-items: space-between;
   gap: 5%;
-  @media (max-width: 375px) {
+  @media (max-width: 400px) {
     margin-left: 20px;
     margin-right: 20px;
     flex-direction: column;

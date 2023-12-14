@@ -6,24 +6,24 @@ import styled from 'styled-components'
 
 const NavBoard = styled.nav`
 display:flex;
-flex-direction:inline;
+flex-direction:row;
 justify-content:space-between;
 margin-left:10%;
 margin-right:10%;
 margin-top:40px;
 margin-bottom:40px;
 color:#FF6060;
-@media (max-width:375px){
-    margin-left:20px;
-margin-right:20px;
+@media (max-width:400px){
+    margin-left:10%;
+margin-right:10%;
 margin-top:20px;
 }
 `
 
 const LogoHeader = styled.img`
 display: flex;
-@media (max-width:375px){
-    width: 145px;
+@media ( max-width:400px ){
+ width: 145px;
 height: 46px;
 }
 `
@@ -33,6 +33,12 @@ color:#FF6060;
 display:flex ;
 justify-content: end;
 gap:50px;
+@media (max-width:400px){
+    display:flex;
+    justify-content: flex-start;
+    padding-left:0;
+gap:20px;
+    };
  `
 const ListLink = styled.li`
 color: #FF6060;
@@ -43,8 +49,9 @@ font-size: 24px;
 font-style: normal;
 font-weight: 500;
 line-height: 142.6%; /* 34.224px */
-@media (max-width:375px){
+@media (max-width:400px){
 font-size:12px;
+text-align: center;
 }
 `
 
@@ -56,17 +63,25 @@ text-align: left;
     text-decoration: underline;
 }`
 
+const LogoLink = styled(Link)`
+display:flex;
+@media ( max-width:400px ){
+    width: 145px;
+   height: 46px;
+   }`
+
+
 function NavHeader() {
     const [currentPage ] = useState(window.location.pathname);
     return(
         <NavBoard>
-             <Link to="/">
+             <LogoLink to="/">
         <LogoHeader
           className={currentPage === '/' ? 'active' : ''}
           src={Logo}
           alt="logo-kasa"
         />
-      </Link>
+      </LogoLink>
             <ListeHeader>
                 <ListLink><StyledLink className={currentPage === '/' ? 'active' : ''}  to ="/">Acceuil</StyledLink></ListLink>
                 <ListLink><StyledLink className={currentPage === '/apropos' ? 'active' : ''}  to ="/apropos">A Propos</StyledLink></ListLink>

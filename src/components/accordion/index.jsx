@@ -58,7 +58,7 @@ const AccordionBtn = styled.button`
   margin-bottom: 0px;
   width: 100%;
   height:52px;
-  @media(max-width:375px){
+  @media(max-width:400px){
     height:30px;
   }
   border-radius:5px;

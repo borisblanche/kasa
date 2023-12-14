@@ -12,10 +12,10 @@ margin-top:40px;
 margin-bottom:40px;
 margin-right:20%;
 @media ( max-width:768px){
-  margin-left:20px;
-margin-top:20px;
+  margin-left:10%;
+margin-top: 10px;
 margin-bottom:20px;
-margin-right:20px;
+margin-right:10%;
 }
 `
 

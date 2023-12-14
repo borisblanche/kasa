@@ -20,9 +20,9 @@ color:FFFFFF;
     justify-content: flex-start;
 align-items:center;
 }
-@media ( max-width : 375px ){
-    margin-left:20px;
-margin-right:20px;
+@media ( max-width : 400px ){
+    margin-left:10%;
+margin-right:10%;
 }
 
 `
@@ -40,19 +40,15 @@ font-weight: 500;
 line-height: 100%; 
 text-align:left;
 padding-left:16px;
+padding-right:50px;
 }
 `
-const MobileBreak = styled.br`
-display:none;
-@media ( max-width : 768px ){
-    display:block;
-}`
 
 function Banner({ backgroundImage, title }) {
     return (
         
         <BannerImg backgroundImage={backgroundImage}>
-            <BannerTitle>{title}<MobileBreak></MobileBreak></BannerTitle>
+            <BannerTitle>{title}</BannerTitle>
             </BannerImg>
             
     )

@@ -12,7 +12,7 @@ const CarouselContainer = styled.div`
   @media (max-width:768px){
     height:255px;
   }
-  @media (max-width:375px){
+  @media (max-width:400px){
     margin-left:20px;
 margin-right:20px;
 
@@ -39,7 +39,7 @@ top:300px;
   cursor: pointer;
   @media (max-width:768px){
     top:265px;
-  @media (max-width:375px){
+  @media (max-width:400px){
     top:210px;
   };
 `;
@@ -54,7 +54,7 @@ margin-left:10px;
       height:24px;
       width:24px;
     }}
-    @media (max-width:375px){
+    @media (max-width:400px){
       left:5%}
     }
 `;
@@ -69,7 +69,7 @@ position:absolute;
       height:24px;
       width:24px;
     }}
-    @media (max-width:375px){
+    @media (max-width:400px){
       right:5%}
     }
 `;

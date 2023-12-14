@@ -9,7 +9,7 @@ flex-direction: column;
 justify-content :start;
 width: 50%;
  color: #FF6060;
-@media (max-width:375px){
+@media (max-width:400px){
   width:100%;
 font-family: Montserrat;
 font-size: 18px;
@@ -31,7 +31,7 @@ font-size: 36px;
 font-style: normal;
 font-weight: 500;
 line-height: 142.6%;
-@media (max-width:375px){
+@media (max-width:400px){
   color: #FF6060;
   font-family: Montserrat;
   font-size: 18px;
@@ -45,7 +45,7 @@ const LocLocation = styled.h3`
 display:flex;
 margin-top:5px;
 justify-content :start;
-@media (max-width:375px){
+@media (max-width:400px){
   font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
